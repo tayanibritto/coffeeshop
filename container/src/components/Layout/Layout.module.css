@@ -25,7 +25,7 @@
         flex-direction: column;
     }
 
-    .cardapio, .pedido {
+    .cardapio {
         width: 100%;
     }
 }

@@ -18,6 +18,13 @@ function ListaPratos() {
         );
     };
 
+    // Formatação de moeda
+    const formatarMoeda = (valor) =>
+        valor.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+        })
+
     return (
         <div className={styles.container}>
             <h2>Cardápio</h2>
@@ -28,7 +35,7 @@ function ListaPratos() {
                 <div className={styles.card} key={prato.id}>
                     <h3>{prato.nome}</h3>
                     <p>{prato.descricao}</p>
-                    <p className={styles.preco}>R$ {prato.preco.toFixed(2)}</p>
+                    <p className={styles.preco}>{formatarMoeda(prato.preco)}</p>
 
                     <button className={styles.button} onClick={() => adicionarAoPedido(prato)}>
                         Adicionar ao pedido

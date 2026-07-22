@@ -7,7 +7,7 @@ function ListaPedido() {
 
     useEffect(() => {
 
-        // Função executada sempre que um item é recebido pelo evento "aidionarItem"
+        // Função executada sempre que um item é recebido pelo evento "adicionarItem"
         const handler = (event) => {
             setItens((prev) => [...prev, event.detail]);
 
